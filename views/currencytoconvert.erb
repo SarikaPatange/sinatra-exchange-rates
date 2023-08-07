@@ -1,0 +1,9 @@
+<!-- <%= symbol = params[:symbol] %> -->
+<h1>Convert <%= symbol %></h1>
+<p><p>Go <a href="/">back</a>.
+<ul>
+  <% @all_symbols.each do |symbol2, amount| %>
+    <li><a href="/<%=symbol%>/<%=symbol2%>"><%="Convert 1 #{symbol} to #{symbol2}..." %></li>
+  <% end %>
+</li>
+</ul>

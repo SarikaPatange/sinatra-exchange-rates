@@ -1,0 +1,13 @@
+<!-- 
+<%= symbol = params[:symbol] %>
+<%= symbol2 = params[:symbol2] %>
+<%= conversion_url = "https://api.exchangerate.host/convert?from=#{symbol}&to=#{symbol2}" %>
+<%= conversion_response = HTTP.get(conversion_url) %>
+<%= conversion_response_hash = JSON.parse(conversion_response) %>
+<%= conversion_response_hash_info = conversion_response_hash.fetch("info") %>
+<%= @conversion_amount = conversion_response_hash_info.fetch("rate") %> 
+-->
+
+<h1>Convert <%= symbol %> to <%= symbol2 %></h1>
+<p>1 <%= symbol %> equals <%= @conversion_amount %> <%= symbol2 %>.</p>
+<p>Go <a href="/<%=symbol%>">back</a>.
